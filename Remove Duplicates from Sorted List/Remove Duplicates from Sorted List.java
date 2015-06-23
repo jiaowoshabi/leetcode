@@ -9,6 +9,8 @@ public class Solution {
         //check duplicates
         while(slow_pointer.next!=null){
             if(slow_pointer.val==fast_pointer.val){
+                //if find duplicates, delete any of them. And update the tow pointers to make sure 
+            	//that fast_pointer goes one step further than slow_pointer
                 slow_pointer.next=fast_pointer.next;
                 fast_pointer=fast_pointer.next;
             }else{
